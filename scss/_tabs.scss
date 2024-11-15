@@ -1,0 +1,83 @@
+.tabs{
+  &__faq {
+    border: 1px solid $accent;
+    padding: 35px 30px;
+    border-radius: 16px;
+    @media (min-width: 1024px) {
+      padding: 35px 40px;
+    }
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+  &__container{
+    @media (min-width: 1024px) {
+      max-width: 772px;
+    }
+
+    label {
+      display: block;
+      transition: all 0.3s ease-out ;
+      position: relative;
+      min-height: 40px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+      padding-right: 80px;
+
+
+      &:after {
+        content: '+';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $accent;
+        color: white;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 24px;
+        border-radius: 40px;
+        transition: 0.3s ease-in-out;
+      }
+
+      &:hover {
+        cursor: pointer;
+        &:after {
+          opacity: 0.8;
+        }
+      }
+      + div {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-out ;
+        border-top: 1px solid $accent;
+        margin-right: 80px;
+        font-size: 18px;
+
+      }
+    }
+  }
+}
+
+input[type="radio"] {  display: none;}
+input[type="radio"] {  transition: all 0.3s ease-out ;}
+input[type="radio"]:checked + label {
+  &:hover {
+    cursor: unset;
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:after { content: '—';}
+  + div {
+    height: auto;
+    opacity: 1;
+    position: relative;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,45 @@
+section.welcome{
+  display: flex;
+  flex-direction: column;
+  img {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    object-fit: cover;
+    max-height: 300px;
+  }
+  .inner {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    h1{ margin-bottom: 16px}
+    p{ margin-bottom: 40px; font-size: 18px}
+    .button{ min-width: 181px}
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: stretch;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    img {
+      margin-bottom: 0;
+      max-width: 50%;
+      max-height: unset;
+    }
+    .inner {
+      max-width: 50%;
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: 1024px) {
+    .inner {
+      padding: 100px 80px;
+      max-width: 66%;
+    }
+    img {
+      max-width: 34%;
+    }
+  }
+}

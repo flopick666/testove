@@ -1,0 +1,43 @@
+header {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  .container{
+    position: relative;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .logo{
+      order: 1;
+    }
+    .button{
+      order: 2;
+      min-width: 106px;
+    }
+    nav {
+      order: 3;
+      width: 100%;
+      //margin-right: 48px;
+      ul { justify-content: center}
+    }
+
+
+
+    @media (min-width: 768px) {
+      flex-wrap: nowrap;
+      .logo{
+        order: 1;
+      }
+      .button{
+        order: 3;
+      }
+      nav {
+        order: 2;
+        margin-right: 48px;
+        ul { justify-content: flex-end}
+      }
+    }
+  }
+}

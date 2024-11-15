@@ -1,0 +1,107 @@
+section.about{
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    h2{ margin: 0}
+    a{
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      position: relative;
+      padding-left: 50px;
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      transition: 0.3s ease-in-out;
+      &:before {
+        background-image: url("../img/icons/icon-courses-details.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 24px;
+        background-color: $accent;
+        border-radius: 100px;
+        content: '';
+        display: inline-block;
+        padding: 8px;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover{
+        &:before{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .wrapper__about{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    .inner__blocks{
+      display: flex;
+      flex-direction: column;
+      .block{
+        border-radius: 14px;
+        padding: 30px;
+        margin-top: 30px;
+        font-size: 18px;
+        &.digit {
+          text-align: center;
+          span {
+            display: block;
+            font-size: 42px;
+            font-weight: 500;
+            font-family: "Poppins", sans-serif;
+          }
+          p{ margin: 0 auto; max-width: 166px;}
+        }
+      }
+      @media (min-width: 768px) {
+        margin-top: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        .block{
+          margin: 0;
+          width: 100%;
+
+          &.digit{
+            width: calc(50% - 75px);
+          }
+        }
+      }
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 21px;
+    }
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 24px;
+      > img {
+        min-width: calc(50% - 12px);
+      }
+      .inner__blocks{
+        margin: 0;
+        .block{
+          padding: 35px 30px;
+          &.digit{
+            padding: 50px 30px;
+          }
+        }
+      }
+    }
+  }
+}
